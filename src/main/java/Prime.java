@@ -19,7 +19,7 @@ public class Prime {
         return true;
     }
 
-    private static int[] primeTwins(int nr){
+    public static int[] primeTwins(int nr){
         int[] rez = new int[2];
         if (nr < 0){
             nr = 0;
@@ -44,18 +44,5 @@ public class Prime {
             }
         }
         return rez;
-    }
-
-    public static void main(String args[]) {
-        System.out.println("Give a number: \n");
-        Scanner in = new Scanner(System.in);
-        int num = in.nextInt();
-        int[] rezultat = Prime.primeTwins(num);
-        if ((rezultat[0] == -1)&& (rezultat[1] == -1)){
-            System.out.println("The search exceeded int limit (2147483647)");
-        }
-        else {
-            System.out.println("Numbers are: " + rezultat[0] + ' ' + rezultat[1]);
-        }
     }
 }
