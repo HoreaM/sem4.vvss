@@ -20,6 +20,7 @@ public class Prime {
     }
 
     public static int[] primeTwins(int nr){
+        int count = 0;
         int[] rez = new int[2];
         if (nr < 0){
             nr = 0;
@@ -42,6 +43,7 @@ public class Prime {
                 }
 
             }
+            count += 1;
         }
         return rez;
     }
